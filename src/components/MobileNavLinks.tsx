@@ -4,6 +4,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const MobileNavLinks = () => {
   const { logout } = useAuth0();
+
+  const handleLogout = () => {
+    logout();
+    window.location.href = window.location.origin;
+  };
   return (
     <div className="flex flex-col gap-5 justify-center items-center w-full">
       <Link
@@ -26,7 +31,7 @@ const MobileNavLinks = () => {
       </Link>
       <Button
         className="flex items-center px-3 font-bold hover:bg-gray-500 w-full"
-        onClick={() => logout()}
+        onClick={handleLogout}
       >
         Log Out
       </Button>
