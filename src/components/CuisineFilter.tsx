@@ -36,7 +36,9 @@ const CuisineFilter = ({
         <div
           onClick={handleCuisinesReset}
           className="text-sm font-semibold mb-2 underline cursor-pointer text-blue-500"
-        ></div>
+        >
+          Reset filter
+        </div>
       </div>
       <div className="space-y-2 flex flex-col">
         {cuisineList
