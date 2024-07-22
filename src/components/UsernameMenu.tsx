@@ -12,6 +12,16 @@ import { Button } from "./ui/button";
 
 const UsernameMenu = () => {
   const { user, logout } = useAuth0();
+
+  const handleLogout = () => {
+    logout({
+      logoutParams: {
+        returnTo:
+          import.meta.env.VITE_AUTH0_CALLBACK_URL || window.location.origin,
+      },
+    });
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:text-orange-500 gap-2">
@@ -39,7 +49,7 @@ const UsernameMenu = () => {
         <DropdownMenuItem>
           <Button
             className="flex flex-1 font-bold bg-orange-500"
-            onClick={() => logout()}
+            onClick={handleLogout}
           >
             Log Out
           </Button>
