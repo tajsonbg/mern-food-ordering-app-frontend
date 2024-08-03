@@ -4,11 +4,8 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Tech Stack and Important Dependencies](#tech-stack-and-important-dependencies)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Setup Instructions](#setup-instructions)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ### Introduction
 
@@ -108,6 +105,85 @@ Start the development server:
 ```bash
 npm run dev
 ```
+
+### Project Structure
+
+The frontend project is organized into several directories and files to maintain a clean and manageable codebase. Below is an overview of the project structure:
+
+```plaintext
+mern-food-ordering-app-frontend/
+├── node_modules/
+├── public/
+├── src/
+│   ├── api/
+│   ├── assets/
+│   ├── auth/
+│   ├── components/
+│   ├── config/
+│   ├── forms/
+│   ├── layouts/
+│   ├── lib/
+│   ├── pages/
+│   ├── AppRoutes.tsx
+│   ├── global.css
+│   ├── main.tsx
+│   ├── types.ts
+│   ├── vite-env.d.ts
+├── .env
+├── .env.example
+├── .eslintrc.cjs
+├── .gitignore
+├── components.json
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+├── tsconfig.app.json
+├── tsconfig.cjs
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+```
+
+#### `src/`
+This directory contains all the source code for the frontend application, organized into several subdirectories for better modularity and maintainability.
+
+- **api/**: Contains files for API calls and services to interact with the backend.
+- **assets/**: Stores static assets such as images, icons, and fonts.
+- **auth/**: Manages authentication-related logic and components.
+- **components/**: Contains reusable UI components used across the application.
+- **config/**: Configuration files and settings for the application.
+- **forms/**: Holds form-related components and logic.
+- **layouts/**: Layout components for structuring different pages.
+- **lib/**: Utility functions and libraries.
+- **pages/**: Contains the main pages and views of the application.
+- **AppRoutes.tsx**: Defines the routes for the application.
+- **global.css**: Global CSS styles for the application.
+- **main.tsx**: Entry point for the React application.
+- **types.ts**: Type definitions used across the application.
+- **vite-env.d.ts**: TypeScript definitions for Vite environment variables.
+
+#### Root Files
+- **.env**: Environment variables for local development (not included in version control).
+- **.env.example**: Example environment variables file to show required variables.
+- **.eslintrc.cjs**: ESLint configuration file.
+- **.gitignore**: Specifies files and directories to be ignored by Git.
+- **components.json**: Configuration file for components.
+- **index.html**: The main HTML file for the application.
+- **package-lock.json**: Automatically generated file to lock the versions of dependencies.
+- **package.json**: Lists the project dependencies and scripts.
+- **postcss.config.js**: PostCSS configuration file.
+- **README.md**: The main documentation file for the project.
+- **tailwind.config.js**: Configuration file for Tailwind CSS.
+- **tsconfig.app.json**: TypeScript configuration specific to the application.
+- **tsconfig.cjs**: TypeScript configuration for CommonJS modules.
+- **tsconfig.json**: Base TypeScript configuration file.
+- **tsconfig.node.json**: TypeScript configuration for Node.js.
+- **vite.config.ts**: Vite configuration file.
+
+This structure ensures that the project is modular, easy to navigate, and maintainable. Each major feature or functionality is encapsulated in its directory, making the codebase more organized and scalable.
 
 
 
